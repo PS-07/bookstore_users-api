@@ -22,10 +22,13 @@ type User struct {
 	Password    string `json:"password"`
 }
 
+// Users slice
+type Users []User
+
 // Validate func
 func (user *User) Validate() *errors.RestErr {
-	user.FirstName = strings.TrimSpace(strings.ToLower(user.FirstName))
-	user.LastName = strings.TrimSpace(strings.ToLower(user.LastName))
+	user.FirstName = strings.TrimSpace(user.FirstName)
+	user.LastName = strings.TrimSpace(user.LastName)
 
 	user.Email = strings.TrimSpace(strings.ToLower(user.Email))
 	if user.Email == "" {
