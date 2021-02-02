@@ -1,10 +1,21 @@
 GET http://localhost:8080/health
 
 ###
-GET http://localhost:8080/users/8
+GET http://localhost:8080/users/1
 
 ###
 POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+    "first_name": "Daniel",
+    "last_name": "Dubov",
+    "email": "dd@chess.com",
+    "password": "dd"
+}
+
+###
+PUT http://localhost:8080/users/1
 Content-Type: application/json
 
 {
@@ -14,22 +25,15 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:8080/users/8
+PATCH  http://localhost:8080/users/1
 Content-Type: application/json
 
 {
-    "first_name": "Daniil",
-    "last_name": "Dubov",
-    "email": "dd@chess.com"
+    "first_name": "Daniil"
 }
 
 ###
-PATCH  http://localhost:8080/users/8
-Content-Type: application/json
-
-{
-    "first_name": "Daniel"
-}
+DELETE http://localhost:8080/users/1
 
 ###
-DELETE http://localhost:8080/users/8
+GET http://localhost:8080/internal/users/search?status=active
