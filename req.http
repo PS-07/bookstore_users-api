@@ -1,15 +1,14 @@
 GET http://localhost:8080/health
 
 ###
-GET http://localhost:8080/users/7
+GET http://localhost:8080/users/3
 
 ###
 POST http://localhost:8080/users
 Content-Type: application/json
 
 {
-    "id": 7,
-    "first_name": "Anish",
-    "last_name": "Giri",
-    "email": "ag@chess.com"
+    "first_name": "Ding",
+    "last_name": "Liren",
+    "email": "dl@chess.com"
 }
