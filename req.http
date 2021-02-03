@@ -38,3 +38,12 @@ DELETE http://localhost:8080/users/1
 
 ###
 GET http://localhost:8080/internal/users/search?status=active
+
+###
+POST http://localhost:8080/users/login
+Content-Type: application/json
+
+{
+    "email": "dd@chess.com",
+    "password": "dd"
+}
